@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 15pt arial;
+            background-color: #25882a;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener("click", clicar)
+        area.addEventListener("mouseenter", entrou)
+        area.addEventListener("mouseout", sair)
+
+        
+        function clicar() {
+            area.innerText = "Clicou!"
+            area.style.background = "red"
+        }
+        
+        function entrou() {
+            area.innerText = "Entrou!"
+        }
+        
+        function sair() {
+            area.innerText = "Saiu!"
+            area.style.background = "#25882a"
+        }
+
+        /*Exixtem vários eventos que podem ser disparados usando JavaScript, no site eventreferences da mozilla podemos encontrar todos*/
+        /*Uma função só vai ser executada quando um evento for disparado*/
+    </script>
+</body>
+</html>
